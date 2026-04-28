@@ -1,0 +1,14 @@
+Empresa A: TechZone
+Vende smartphones de gama media a precios accesibles.
+Su estrategia es vender mucho volumen con precios competitivos.
+Tiene buena distribución pero no destaca en calidad premium.
+
+Empresa B: LuxPhone
+Vende smartphones premium de alta calidad.
+Sus precios son elevados y se enfoca en clientes exclusivos.
+Tiene una marca fuerte pero es poco accesible para el público general.
+
+Empresa C: Econotech
+Ofrece productos muy baratos con calidad básica.
+Su estrategia es competir solo por precio.
+Tiene mala reputación en durabilidad.
