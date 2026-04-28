@@ -1,75 +1,72 @@
-# 🧠💼 ORION — Inteligencia Estratégica de Mercado
+# 🧠💼 ORION — Sistema de Inteligencia Competitiva IA
 
-ORION es un sistema de inteligencia competitiva basado en **RAG (Retrieval-Augmented Generation)** que analiza empresas y genera informes estratégicos tipo consultoría.
+## 📌 Descripción
+ORION es un sistema basado en inteligencia artificial que analiza información de empresas y genera respuestas estratégicas a partir de un contexto definido. Su objetivo es simular el trabajo de una consultora, permitiendo evaluar fortalezas, debilidades, riesgos y estrategias recomendadas.
 
----
+## ⚙️ Funcionamiento del sistema
+El sistema trabaja de la siguiente manera:
+1. Carga información desde un archivo (`competidores.txt`)
+2. Divide el texto en fragmentos
+3. Genera embeddings (representaciones vectoriales)
+4. Almacena la información en FAISS
+5. Permite realizar consultas
+6. Responde usando IA en base al contexto
 
-## 🚀 ¿Qué hace?
+## 🛠️ Tecnologías utilizadas
+- Python
+- LangChain
+- Transformers (Hugging Face)
+- FAISS
+- Sentence-Transformers
 
-- Analiza empresas desde documentos locales
-- Usa embeddings para recuperar información relevante
-- Genera análisis estratégico con LLM local (Ollama)
-- Entrega ranking de riesgo y recomendaciones
-
----
-
-## 🏗️ Arquitectura
-
-1. TextLoader → carga datos
-2. RecursiveCharacterTextSplitter → divide texto
-3. HuggingFaceEmbeddings → crea vectores
-4. FAISS → base de datos vectorial
-5. Ollama (Llama 3) → modelo de lenguaje
-6. Prompt → genera informe estratégico
-
----
-
-## 📂 Estructura
-
+## 📂 Estructura del proyecto
 ORION/
-│
-├── main.py
-├── competidores.txt
-├── requirements.txt
-└── README.md
+│── main.py
+│── competidores.txt
+│── requirements.txt
+│── README.md
 
----
+## 🚀 Instalación y ejecución
+1. Clonar repositorio
+   git clone https://github.com/abbecerra/Orion.git
+   cd Orion
 
-## ⚙️ Instalación
+2. Crear entorno virtual
+   python -m venv venv
 
-pip install -r requirements.txt
+3. Activar entorno (Windows)
+   venv\Scripts\activate
 
-ollama run llama3
+4. Instalar dependencias
+   pip install -r requirements.txt
 
----
+5. Ejecutar programa
+   python main.py
 
-## ▶️ Ejecución
+## 💬 Ejemplos de consultas
+- ¿Debilidades de Empresa B?
+- ¿Qué estrategia recomendarías a Empresa A?
+- ¿Qué empresa tiene mayor riesgo de perder mercado?
+- ¿Qué empresa compite solo por precio?
 
-python main.py
-
----
-
-## 💬 Ejemplo
-
+## 📊 Ejemplo de uso
+Consulta:
 ¿Qué empresa tiene mayor riesgo de perder mercado?
 
-ORION responde con:
-- Diagnóstico
-- Análisis por empresa
-- Ranking
-- Conclusión
+Respuesta esperada:
+Econotech presenta el mayor riesgo debido a su dependencia del precio y baja diferenciación en calidad.
 
----
+## 🎯 Objetivo del proyecto
+Desarrollar una herramienta que automatice el análisis competitivo de empresas utilizando inteligencia artificial.
 
-## 🧠 Objetivo
+## 📈 Posibles mejoras
+- Integración con modelos más avanzados
+- Uso de APIs externas
+- Interfaz gráfica
+- Incorporación de más datos empresariales
 
-Demostrar uso de:
-- IA generativa
-- RAG
-- LLM local
-- Análisis estratégico
+## 👤 Autor
+Abraham Becerra
 
----
-
-## 👨‍💻 Autor
-Proyecto académico ORION — Inteligencia Artificial
+## 📌 Nota
+Para ejecutar correctamente el proyecto, es necesario instalar las dependencias indicadas en requirements.txt.
