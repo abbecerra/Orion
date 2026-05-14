@@ -1,72 +1,184 @@
 # 🧠💼 ORION — Sistema de Inteligencia Competitiva IA
 
 ## 📌 Descripción
-ORION es un sistema basado en inteligencia artificial que analiza información de empresas y genera respuestas estratégicas a partir de un contexto definido. Su objetivo es simular el trabajo de una consultora, permitiendo evaluar fortalezas, debilidades, riesgos y estrategias recomendadas.
+ORION es un sistema basado en inteligencia artificial diseñado para analizar información empresarial y generar respuestas estratégicas a partir de un contexto definido. El objetivo del proyecto es simular el trabajo de una consultora estratégica, permitiendo evaluar fortalezas, debilidades, riesgos competitivos y posibles estrategias de mejora para distintas empresas.
+
+El sistema implementa una arquitectura basada en Retrieval-Augmented Generation (RAG), utilizando recuperación contextual mediante embeddings y búsqueda vectorial.
+
+---
 
 ## ⚙️ Funcionamiento del sistema
-El sistema trabaja de la siguiente manera:
-1. Carga información desde un archivo (`competidores.txt`)
-2. Divide el texto en fragmentos
-3. Genera embeddings (representaciones vectoriales)
-4. Almacena la información en FAISS
-5. Permite realizar consultas
-6. Responde usando IA en base al contexto
+
+El flujo general del sistema funciona de la siguiente manera:
+
+1. Carga información desde un archivo de conocimiento (`competidores.txt`)
+2. Divide el contenido en fragmentos de texto
+3. Genera embeddings (representaciones vectoriales del contenido)
+4. Almacena los vectores en una base FAISS
+5. Permite al usuario realizar consultas estratégicas
+6. Recupera el contexto más relevante mediante similarity search
+7. Construye un prompt estratégico
+8. Envía la consulta al modelo de lenguaje
+9. Genera una respuesta estructurada
+
+---
+
+## 🔄 Flujo del sistema
+
+```text
+┌─────────────┐
+│   Usuario   │
+└──────┬──────┘
+       ↓
+┌────────────────────┐
+│ Consulta ingresada │
+└──────┬─────────────┘
+       ↓
+┌────────────────────┐
+│ Búsqueda en FAISS  │
+│ (similarity search)│
+└──────┬─────────────┘
+       ↓
+┌────────────────────┐
+│ Recuperación de    │
+│ contexto relevante │
+└──────┬─────────────┘
+       ↓
+┌────────────────────┐
+│ Construcción del   │
+│ prompt estratégico │
+└──────┬─────────────┘
+       ↓
+┌────────────────────┐
+│   Modelo LLM       │
+│   (Ollama/Llama3)  │
+└──────┬─────────────┘
+       ↓
+┌────────────────────┐
+│ Respuesta final    │
+└────────────────────┘
+```
+
+---
 
 ## 🛠️ Tecnologías utilizadas
+
 - Python
 - LangChain
-- Transformers (Hugging Face)
+- Hugging Face Transformers
+- Sentence Transformers
 - FAISS
-- Sentence-Transformers
+- Ollama
+- Llama3
+
+---
 
 ## 📂 Estructura del proyecto
+
+```text
 ORION/
 │── main.py
 │── competidores.txt
 │── requirements.txt
 │── README.md
+```
+
+---
 
 ## 🚀 Instalación y ejecución
-1. Clonar repositorio
-   git clone https://github.com/abbecerra/Orion.git
-   cd Orion
 
-2. Crear entorno virtual
-   python -m venv venv
+### 1. Clonar repositorio
 
-3. Activar entorno (Windows)
-   venv\Scripts\activate
+```bash
+git clone https://github.com/abbecerra/Orion.git
+cd Orion
+```
 
-4. Instalar dependencias
-   pip install -r requirements.txt
+### 2. Crear entorno virtual
 
-5. Ejecutar programa
-   python main.py
+```bash
+python -m venv venv
+```
+
+### 3. Activar entorno virtual (Windows)
+
+```bash
+venv\Scripts\activate
+```
+
+### 4. Instalar dependencias
+
+```bash
+pip install -r requirements.txt
+```
+
+### 5. Ejecutar programa
+
+```bash
+python main.py
+```
+
+---
 
 ## 💬 Ejemplos de consultas
+
 - ¿Debilidades de Empresa B?
 - ¿Qué estrategia recomendarías a Empresa A?
 - ¿Qué empresa tiene mayor riesgo de perder mercado?
 - ¿Qué empresa compite solo por precio?
+- ¿Cuál empresa tiene mejor posicionamiento estratégico?
+
+---
 
 ## 📊 Ejemplo de uso
-Consulta:
-¿Qué empresa tiene mayor riesgo de perder mercado?
 
-Respuesta esperada:
-Econotech presenta el mayor riesgo debido a su dependencia del precio y baja diferenciación en calidad.
+**Consulta:**
+
+```text
+¿Qué empresa tiene mayor riesgo de perder mercado?
+```
+
+**Respuesta esperada:**
+
+```text
+Econotech presenta el mayor riesgo debido a su alta dependencia del precio, baja diferenciación y mala percepción de calidad.
+```
+
+---
 
 ## 🎯 Objetivo del proyecto
-Desarrollar una herramienta que automatice el análisis competitivo de empresas utilizando inteligencia artificial.
 
-## 📈 Posibles mejoras
-- Integración con modelos más avanzados
-- Uso de APIs externas
-- Interfaz gráfica
-- Incorporación de más datos empresariales
+Desarrollar una herramienta capaz de automatizar el análisis competitivo empresarial utilizando inteligencia artificial y recuperación contextual.
+
+---
+
+## 📈 Posibles mejoras futuras
+
+- Integración con herramientas web externas
+- Uso de modelos más avanzados
+- Implementación de memoria conversacional
+- Interfaz gráfica para usuarios
+- Soporte para documentos PDF o bases de datos empresariales
+
+---
 
 ## 👤 Autor
-Abraham Becerra
+
+**Abraham Becerra**
+
+---
 
 ## 📌 Nota
-Para ejecutar correctamente el proyecto, es necesario instalar las dependencias indicadas en requirements.txt.
+
+Para ejecutar correctamente el proyecto es necesario:
+
+- Tener Python instalado
+- Instalar las dependencias desde `requirements.txt`
+- Tener Ollama instalado localmente
+- Descargar previamente el modelo `llama3`
+
+Ejemplo:
+
+```bash
+ollama run llama3
+```
