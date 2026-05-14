@@ -162,7 +162,7 @@ Desarrollar una herramienta capaz de automatizar el análisis competitivo empres
 
 ---
 
-## 👤 Autor
+## Autor
 
 **Abraham Becerra**
 
