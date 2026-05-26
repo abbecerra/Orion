@@ -2,11 +2,20 @@ from langchain_community.llms import Ollama
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.document_loaders import TextLoader
+from langchain.memory import ConversationBufferMemory
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+from ddgs import DDGS
+import warnings
 
+warnings.filterwarnings("ignore")
 
-loader = TextLoader("competidores.txt", encoding="utf-8")
-docs = loader.load()
+print("\n🧠 ORION v2 🧠 \n")
+
+try:
+    loader = TextLoader("competidores.txt", encoding="utf-8")
+    docs = loader.load()
+except Exception as e:
+    raise Exception(f"Error cargando competidores.txt: {e}")
 
 splitter = RecursiveCharacterTextSplitter(
     chunk_size=300,
@@ -15,24 +24,96 @@ splitter = RecursiveCharacterTextSplitter(
 
 docs = splitter.split_documents(docs)
 
+try:
+    embeddings = HuggingFaceEmbeddings(
+        model_name="sentence-transformers/all-MiniLM-L6-v2"
+    )
 
-embeddings = HuggingFaceEmbeddings(
-    model_name="sentence-transformers/all-MiniLM-L6-v2"
+    db = FAISS.from_documents(docs, embeddings)
+
+except Exception as e:
+    raise Exception(f"Error creando FAISS: {e}")
+
+try:
+    llm = Ollama(model="llama3")
+except Exception as e:
+    raise Exception(f"Error iniciando Llama3: {e}")
+
+memory = ConversationBufferMemory(
+    memory_key="chat_history",
+    return_messages=False
 )
 
-db = FAISS.from_documents(docs, embeddings)
+
+def buscar_web(query):
+    try:
+        with DDGS() as ddgs:
+            resultados = ddgs.text(query, max_results=3)
+
+            textos = []
+
+            for r in resultados:
+                titulo = r.get("title", "")
+                body = r.get("body", "")
+
+                if titulo or body:
+                    textos.append(f"{titulo}: {body}")
+
+            return "\n".join(textos)
+
+    except:
+        return ""
 
 
-llm = Ollama(model="llama3")
+def requiere_web(query):
+    keywords = [
+        "samsung",
+        "apple",
+        "tesla",
+        "amazon",
+        "google",
+        "microsoft",
+        "meta",
+        "netflix",
+        "mercado",
+        "industria",
+        "competencia",
+        "empresa real"
+    ]
 
-print("\n🧠💼 ORION — CONSULTORÍA ESTRATÉGICA DE MERCADO\n")
+    q = query.lower()
+
+    return any(word in q for word in keywords)
 
 
-def build_prompt(query, context):
-    return f"""
-Eres ORION, una consultora estratégica senior.
+def obtener_contexto(query):
+    if requiere_web(query):
+        contexto_web = buscar_web(query)
 
-Debes evaluar empresas con lógica consistente y cuantificable.
+        return f"""
+CONTEXTO WEB:
+{contexto_web}
+"""
+
+    docs_found = db.similarity_search(query, k=3)
+
+    contexto_local = "\n".join(
+        [doc.page_content for doc in docs_found]
+    )
+
+    return contexto_local
+
+
+def build_prompt(query, context, history, web_mode=False):
+    if web_mode:
+        return f"""
+Eres ORION v2, consultora estratégica empresarial senior.
+
+REGLAS:
+- Usa SOLO contexto web.
+- No inventes.
+- Si falta evidencia responde:
+"No tengo suficiente información para responder con precisión."
 
 CONTEXTO:
 {context}
@@ -40,47 +121,72 @@ CONTEXTO:
 CONSULTA:
 {query}
 
-REGLAS OBLIGATORIAS:
-- Evalúa cada empresa con puntaje de riesgo de 0 a 100
-- 0 = sin riesgo / 100 = riesgo extremo
-- Usa estos factores:
-  • dependencia de precio
-  • diferenciación
-  • accesibilidad de mercado
+RESPONDE:
+1. Diagnóstico
+2. Fortalezas
+3. Debilidades
+4. Riesgos
+5. Recomendación
+"""
 
-RESPONDE EN FORMATO:
+    return f"""
+Eres ORION v2, consultora estratégica empresarial senior.
 
-1. 📊 Diagnóstico del mercado
+REGLAS:
+- Usa SOLO el contexto.
+- No inventes información.
 
-2. 🏢 Evaluación por empresa:
-   - A: score de riesgo + explicación breve
-   - B: score de riesgo + explicación breve
-   - C: score de riesgo + explicación breve
+HISTORIAL:
+{history}
 
-3. ⚖️ Ranking de riesgo (ordenado por score)
+CONTEXTO:
+{context}
 
-4. ⚠️ Justificación basada en scores
+CONSULTA:
+{query}
 
-5. 🚀 Conclusión final (1 sola empresa)
+RESPONDE:
+1. Diagnóstico
+2. Evaluación
+3. Ranking
+4. Recomendación
 """
 
 
-while True:
-    query = input("\nConsulta (o 'salir'): ")
+def analizar_consulta(query):
+    query = query.strip()
 
-    if query.lower() == "salir":
-        break
+    if not query:
+        return "Consulta vacía."
 
-    
-    docs_found = db.similarity_search(query, k=3)
-    context = "\n".join([d.page_content for d in docs_found])
+    web_mode = requiere_web(query)
 
-    
-    prompt = build_prompt(query, context)
+    if web_mode:
+        history = ""
+    else:
+        history = memory.load_memory_variables({}).get(
+            "chat_history",
+            ""
+        )
 
-  
+    context = obtener_contexto(query)
+
+    if not context.strip():
+        return "No se encontró contexto suficiente."
+
+    prompt = build_prompt(
+        query,
+        context,
+        history,
+        web_mode
+    )
+
     response = llm.invoke(prompt)
 
-    print("\n📊 INFORME CONSULTORA ORION:\n")
-    print(response)
-    print("\n" + "-" * 60)
+    if not web_mode:
+        memory.save_context(
+            {"input": query},
+            {"output": response}
+        )
+
+    return response

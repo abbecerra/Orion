@@ -1,120 +1,197 @@
-# 🧠💼 ORION — Sistema de Inteligencia Competitiva IA
+# 🧠💼 ORION v2 — Sistema Inteligente de Análisis Estratégico Empresarial
 
 ## 📌 Descripción
-ORION es un agente inteligente basado en inteligencia artificial diseñado para analizar información empresarial y generar respuestas estratégicas a partir de un contexto definido.
+ORION v2 es un agente inteligente basado en inteligencia artificial diseñado para realizar análisis estratégicos empresariales y de mercado.
 
-El sistema simula el trabajo de una consultora estratégica, permitiendo identificar fortalezas, debilidades, riesgos competitivos y oportunidades de mejora mediante herramientas de consulta, razonamiento y generación de respuestas automáticas.
+El sistema simula el comportamiento de una consultora estratégica empresarial, permitiendo evaluar organizaciones, identificar riesgos competitivos, analizar fortalezas y debilidades, comparar empresas reales y generar recomendaciones estratégicas fundamentadas.
 
-Este proyecto fue desarrollado como parte de una evaluación académica orientada al diseño de agentes funcionales con capacidades de memoria, planificación y orquestación.
+La solución implementa una arquitectura híbrida basada en Retrieval-Augmented Generation (RAG), combinando recuperación de conocimiento interno, búsqueda web externa, memoria conversacional y generación de respuestas mediante modelos de lenguaje.
+
+Además, el sistema incorpora una interfaz gráfica de escritorio, permitiendo una experiencia más profesional e intuitiva para el usuario.
+
+---
 
 ## 🎯 Objetivo del proyecto
-Desarrollar un agente inteligente capaz de apoyar procesos de análisis competitivo empresarial mediante inteligencia artificial, automatizando la consulta, interpretación y generación de recomendaciones estratégicas.
+Desarrollar un agente inteligente organizacional capaz de apoyar procesos de análisis estratégico empresarial mediante inteligencia artificial, recuperación contextual, memoria conversacional y herramientas externas de consulta.
+
+El proyecto busca aplicar conceptos de:
+
+- agentes inteligentes
+- planificación
+- orquestación
+- retrieval augmented generation (RAG)
+- memoria contextual
+- interfaces de usuario
+
+---
 
 ## ⚙️ Funcionamiento del sistema
-El flujo de funcionamiento de ORION es el siguiente:
+El flujo de funcionamiento de ORION v2 es el siguiente:
 
-1. Carga información desde un archivo de contexto (`competidores.txt`)
-2. Divide el contenido en fragmentos semánticos
-3. Genera embeddings vectoriales del contenido
-4. Almacena la información en una base vectorial FAISS
-5. Recibe consultas del usuario
-6. Recupera el contexto más relevante
-7. Envía la información al modelo de lenguaje
-8. Genera una respuesta estratégica basada en el contexto recuperado
+1. El usuario ingresa una consulta desde la interfaz gráfica
+2. El sistema analiza el tipo de consulta
+3. Determina dinámicamente qué fuente utilizar:
+   - Base de conocimiento interna (FAISS)
+   - Búsqueda web externa (DuckDuckGo)
+4. Recupera el contexto relevante
+5. Integra memoria conversacional cuando corresponde
+6. Construye un prompt estratégico
+7. Envía la consulta al modelo LLM
+8. Genera una respuesta empresarial estructurada
+
+---
 
 ## 🧠 Modelo utilizado
-ORION utiliza un modelo de lenguaje ejecutado localmente mediante **Ollama**, integrado a través de **LangChain**.
+ORION v2 utiliza un modelo de lenguaje ejecutado localmente mediante **Ollama**, específicamente:
 
-Además, utiliza modelos **Sentence Transformers** para la generación de embeddings semánticos.
+**Modelo principal:**
+- Llama 3
 
-### Justificación
-La elección de esta arquitectura responde a:
+Para generación de embeddings semánticos:
 
-- Ejecución local sin dependencia de APIs externas
-- Mayor reproducibilidad para evaluación académica
-- Menor costo operativo
-- Privacidad de la información procesada
-- Facilidad de integración con herramientas de recuperación contextual
+**Modelo de embeddings:**
+- sentence-transformers/all-MiniLM-L6-v2
+
+---
+
+## 📌 Justificación técnica
+La arquitectura fue seleccionada considerando:
+
+- ejecución local sin depender de APIs pagadas
+- mayor reproducibilidad académica
+- privacidad de los datos
+- flexibilidad para integrar múltiples herramientas
+- bajo costo operativo
+- facilidad de expansión futura
+
+---
 
 ## 🧠 Memoria utilizada
-ORION implementa memoria contextual mediante almacenamiento vectorial usando **FAISS**.
+ORION implementa memoria conversacional de corto plazo mediante:
 
-El contenido empresarial cargado es transformado en embeddings semánticos y almacenado en una base vectorial, permitiendo que el agente recupere información relevante durante las consultas.
+**ConversationBufferMemory**
 
-### Tipos de memoria implementados
+Esto permite:
+
+- recordar interacciones anteriores
+- mantener coherencia contextual
+- generar respuestas más consistentes en consultas relacionadas
+
+### Tipos de memoria
 
 **Memoria de corto plazo**
-- Contexto de consulta actual
-- Recuperación dinámica de información relevante
+- historial conversacional
+- contexto reciente de interacción
 
-**Memoria de largo plazo**
-- Persistencia del conocimiento empresarial cargado en la base vectorial FAISS
-- Reutilización del conocimiento durante múltiples consultas
+**Memoria contextual**
+- recuperación dinámica mediante FAISS
 
-## 📋 Planificación utilizada
-ORION implementa un flujo secuencial planificado para resolver cada consulta.
+---
 
-### Secuencia de ejecución
-1. Recepción de consulta del usuario
-2. Recuperación del contexto relevante desde la memoria vectorial
-3. Organización del contenido recuperado
-4. Envío del contexto al modelo LLM
-5. Generación de respuesta estratégica
+## 📋 Planificación implementada
+ORION utiliza planificación condicional.
 
-Este enfoque permite secuenciar tareas de forma ordenada y reproducible.
+El sistema analiza la intención de la consulta y decide dinámicamente qué herramienta utilizar.
 
-## 🔄 Orquestación utilizada
-La coordinación de los distintos componentes del sistema se realiza mediante **LangChain**, actuando como framework de orquestación.
+### Ejemplos
+**Consulta interna**
+```text
+Analiza TechZone
+```
 
-LangChain permite integrar:
+→ usa FAISS
 
-- Recuperación documental
-- Base vectorial FAISS
-- Modelos de embeddings
-- Modelo LLM local
-- Flujo completo de consulta y respuesta
+---
 
-Esto asegura una arquitectura modular y mantenible.
+**Consulta externa**
+```text
+Compara Samsung con Apple
+```
+
+→ usa búsqueda web
+
+---
+
+Este enfoque permite optimizar:
+
+- velocidad
+- precisión
+- uso eficiente del contexto
+
+---
+
+## 🔄 Orquestación del sistema
+La orquestación del sistema se realiza mediante **LangChain**.
+
+LangChain coordina:
+
+- carga documental
+- fragmentación de texto
+- embeddings
+- base vectorial FAISS
+- memoria conversacional
+- búsqueda externa
+- construcción de prompts
+- conexión con LLM
+
+Esto permite una arquitectura modular, organizada y mantenible.
+
+---
 
 ## 🏗️ Arquitectura del sistema
 
 ```text
 Usuario
    ↓
-main.py
+Interfaz gráfica (CustomTkinter)
    ↓
-Carga archivo competidores.txt
+Planificador de consulta
    ↓
-Fragmentación del contenido
+¿Consulta interna o externa?
    ↓
-Generación de embeddings
+┌───────────────┬───────────────┐
+│               │               │
+FAISS        DuckDuckGo Web Search
+│               │
+└───────────────┴───────────────┘
    ↓
-Almacenamiento en FAISS
+Memoria conversacional
    ↓
-Recuperación de contexto relevante
+Construcción de prompt
    ↓
-Modelo LLM (Ollama)
+Llama 3 (Ollama)
    ↓
 Respuesta estratégica
 ```
 
+---
+
 ## 🛠️ Tecnologías utilizadas
 - Python
 - LangChain
-- Ollama
+- LangChain Community
 - FAISS
 - Sentence Transformers
-- Hugging Face Transformers
+- Hugging Face
+- Ollama
+- Llama 3
+- DuckDuckGo Search (DDGS)
+- CustomTkinter
+
+---
 
 ## 📂 Estructura del proyecto
 
 ```text
 ORION/
 │── main.py
+│── app.py
 │── competidores.txt
 │── requirements.txt
 │── README.md
 ```
+
+---
 
 ## 🚀 Instalación y ejecución
 
@@ -124,76 +201,112 @@ git clone https://github.com/abbecerra/Orion.git
 cd Orion
 ```
 
+---
+
 ### 2. Crear entorno virtual
 ```bash
 python -m venv venv
 ```
+
+---
 
 ### 3. Activar entorno virtual (Windows)
 ```bash
 venv\Scripts\activate
 ```
 
+---
+
 ### 4. Instalar dependencias
 ```bash
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
+---
+
 ### 5. Instalar Ollama
-Descargar e instalar desde:
+Descargar desde:
 
 https://ollama.com
 
-### 6. Descargar modelo utilizado
+---
+
+### 6. Descargar modelo
 ```bash
 ollama pull llama3
 ```
 
-### 7. Ejecutar el sistema
+---
+
+### 7. Ejecutar aplicación
 ```bash
-python main.py
+python app.py
 ```
 
-## 💬 Ejemplos de consultas
-El sistema permite consultas estratégicas como:
+---
 
-- ¿Qué debilidades presenta Empresa B?
-- ¿Qué estrategia recomendarías para Empresa A?
-- ¿Qué empresa presenta mayor riesgo competitivo?
-- ¿Qué empresa compite principalmente por precio?
-- ¿Qué oportunidades estratégicas observas en este mercado?
+## 💬 Ejemplos de uso
 
-## 📊 Ejemplo de uso
+### Consultas internas
+- Analiza TechZone
+- ¿Qué riesgos presenta Econotech?
+- Compara LuxPhone con TechZone
 
-### Consulta
+### Consultas externas
+- Analiza Tesla
+- Compara Samsung con Apple
+- Analiza Amazon
+- Evalúa Microsoft frente a Google
+
+---
+
+## 📊 Ejemplo de respuesta
 ```text
-¿Qué empresa tiene mayor riesgo de perder mercado?
+1. Diagnóstico general
+2. Fortalezas
+3. Debilidades
+4. Riesgos competitivos
+5. Recomendación estratégica
 ```
 
-### Respuesta esperada
-```text
-Econotech presenta mayor riesgo debido a su fuerte dependencia del precio y baja diferenciación competitiva, lo que reduce su capacidad de sostener ventajas frente a competidores con mayor valor agregado.
-```
+---
 
-## 📈 Posibles mejoras futuras
-- Interfaz gráfica web
-- Integración con fuentes de datos externas
-- Soporte para múltiples documentos
-- Incorporación de memoria persistente ampliada
-- Mejoras en planificación autónoma del agente
-- Integración con modelos LLM más avanzados
+## 📈 Optimizaciones implementadas
+El sistema incorpora mejoras para eficiencia:
+
+- retrieval selectivo
+- planificación condicional
+- memoria contextual controlada
+- separación entre consultas internas y externas
+- control básico anti alucinación
+
+---
+
+## 🔮 Posibles mejoras futuras
+- persistencia de memoria a largo plazo
+- integración con APIs empresariales
+- dashboards analíticos
+- exportación PDF
+- integración con bases SQL
+- multiagentes especializados
+- scoring cuantitativo avanzado
+
+---
 
 ## 👤 Autor
 **Abraham Becerra**
 
 
+---
+
 ## 📌 Reproducibilidad
 El proyecto incluye:
 
-✅ Código fuente completo  
-✅ Archivo `requirements.txt`  
-✅ README con instrucciones de instalación  
-✅ Dependencias documentadas  
-✅ Uso de modelo local reproducible  
+✅ código fuente completo  
+✅ requirements con versiones  
+✅ instrucciones de instalación  
+✅ modelo documentado  
+✅ ejecución local reproducible  
+✅ interfaz gráfica funcional  
 
 Esto permite que terceros puedan ejecutar el sistema fuera del entorno original.
