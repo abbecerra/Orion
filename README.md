@@ -1,14 +1,16 @@
-# 🧠 ORION AI
+# 🧠 ORION
+
+# Sistema Inteligente de Apoyo a Decisiones Comerciales
 
 <div align="center">
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
-![CustomTkinter](https://img.shields.io/badge/GUI-CustomTkinter-green)
-![SERPAPI](https://img.shields.io/badge/Market-SERPAPI-red)
-![PDF](https://img.shields.io/badge/Reports-PDF-orange)
-![Status](https://img.shields.io/badge/Status-Production-success)
+![SERPAPI](https://img.shields.io/badge/SERPAPI-Inteligencia%20de%20Mercado-red)
+![CustomTkinter](https://img.shields.io/badge/Interfaz-CustomTkinter-green)
+![Streamlit](https://img.shields.io/badge/Monitoreo-Streamlit-orange)
+![Estado](https://img.shields.io/badge/Estado-Operativo-success)
 
-### Plataforma Inteligente de Análisis Estratégico de Precios
+### Plataforma Inteligente para el Análisis Estratégico de Mercado y Gestión Comercial
 
 **Autor:** Abraham Becerra Muñoz
 **Carrera:** Ingeniería en Informática
@@ -19,68 +21,80 @@
 
 ---
 
-# 📌 Descripción del Proyecto
+# 📌 Introducción
 
-ORION AI es una plataforma inteligente orientada a la automatización de procesos de análisis comercial y pricing estratégico.
+ORION es un sistema inteligente diseñado para apoyar la toma de decisiones comerciales mediante el análisis automatizado de mercados, evaluación de riesgos y generación de estrategias comerciales.
 
-El sistema integra múltiples componentes de inteligencia artificial, análisis estadístico y recuperación de información de mercado para generar recomendaciones comerciales automáticas basadas en datos reales.
+La plataforma integra múltiples componentes de inteligencia artificial, recuperación de información, análisis estadístico y sistemas de observabilidad para proporcionar recomendaciones basadas en datos reales del mercado.
 
-La plataforma permite:
-
-* Obtener precios reales desde internet.
-* Analizar competencia.
-* Determinar estrategias comerciales.
-* Calcular precios recomendados.
-* Evaluar riesgos comerciales.
-* Generar reportes ejecutivos.
-* Mantener historial y memoria de análisis.
+El sistema fue desarrollado utilizando una arquitectura modular basada en agentes especializados, permitiendo una alta escalabilidad, mantenibilidad y resiliencia.
 
 ---
 
-# 🎯 Objetivos
+# 🎯 Objetivos del Proyecto
 
 ## Objetivo General
 
-Desarrollar una plataforma inteligente capaz de asistir procesos de pricing mediante técnicas de inteligencia artificial y análisis de mercado automatizado.
+Desarrollar un sistema inteligente capaz de automatizar procesos de análisis comercial y recomendación estratégica mediante el uso de técnicas de inteligencia artificial y análisis de mercado.
 
 ## Objetivos Específicos
 
-* Automatizar el análisis de precios.
-* Reducir errores humanos.
-* Incorporar inteligencia comercial.
-* Implementar validaciones automáticas.
-* Generar recomendaciones de pricing.
-* Evaluar riesgo de mercado.
-* Producir reportes ejecutivos.
+* Automatizar el análisis de precios de mercado.
+* Incorporar inteligencia comercial basada en datos reales.
+* Evaluar riesgos comerciales automáticamente.
+* Implementar mecanismos de recuperación ante errores.
+* Generar reportes ejecutivos automatizados.
+* Implementar sistemas de observabilidad y monitoreo.
+* Facilitar la toma de decisiones comerciales.
 
 ---
 
-# 🧠 Arquitectura del Sistema
+# 🏗 Arquitectura del Sistema
+
+ORION implementa una arquitectura basada en agentes especializados y separación de responsabilidades.
 
 ```text
                      USUARIO
                          │
                          ▼
                 ┌────────────────┐
-                │ ORION GUI      │
+                │ Interfaz ORION │
                 └────────┬───────┘
                          │
                          ▼
                 ┌────────────────┐
-                │ AGENTE ORION   │
+                │ Agente ORION   │
                 └────────┬───────┘
                          │
-       ┌─────────────────┼─────────────────┐
-       ▼                 ▼                 ▼
- Market Search     Pricing Engine     Risk Engine
-       │                 │                 │
-       └──────────┬──────┴──────┬──────────┘
-                  ▼             ▼
-               Memory         Logger
-                  │
-                  ▼
-            PDF Generator
+        ┌────────────────┼────────────────┐
+        ▼                ▼                ▼
+ Motor de        Motor de Estrategia   Motor de
+ Mercado             Comercial          Riesgo
+        │                │                │
+        └──────────┬─────┴─────┬──────────┘
+                   ▼           ▼
+              Memoria      Observabilidad
+                   │
+                   ▼
+             Generador PDF
 ```
+
+---
+
+# 🤖 Sistema Multiagente
+
+La plataforma implementa una arquitectura basada en agentes especializados.
+
+| Agente                | Responsabilidad          |
+| --------------------- | ------------------------ |
+| Agente Principal      | Coordinación general     |
+| Planificador          | Selección de acciones    |
+| Motor de Mercado      | Obtención de información |
+| Motor Comercial       | Cálculo estratégico      |
+| Motor de Riesgo       | Evaluación comercial     |
+| Sistema de Memoria    | Persistencia             |
+| Sistema de Registro   | Observabilidad           |
+| Generador de Reportes | Documentación            |
 
 ---
 
@@ -90,81 +104,65 @@ Desarrollar una plataforma inteligente capaz de asistir procesos de pricing medi
 Usuario ingresa producto
             │
             ▼
-Validación de entrada
+Validación de datos
             │
             ▼
 Corrección automática
             │
             ▼
-Búsqueda Google Shopping
+Consulta de mercado
             │
             ▼
 Filtrado inteligente
             │
             ▼
-Eliminación de outliers
+Eliminación de valores atípicos
             │
             ▼
-Análisis de mercado
+Análisis competitivo
             │
             ▼
-Estrategia comercial
+Cálculo de estrategia
             │
             ▼
 Evaluación de riesgo
             │
             ▼
-Generación PDF
+Generación de reporte
             │
             ▼
-Persistencia
+Persistencia y monitoreo
 ```
 
 ---
 
-# 🤖 Sistema Multiagente
+# 🔎 Sistema de Inteligencia de Mercado
 
-ORION implementa una arquitectura basada en agentes especializados.
+ORION obtiene información comercial utilizando Google Shopping mediante SERPAPI.
 
-| Agente         | Función                 |
-| -------------- | ----------------------- |
-| Planner        | Planificación           |
-| Market Search  | Inteligencia de mercado |
-| Pricing Engine | Optimización de precios |
-| Risk Engine    | Evaluación de riesgo    |
-| Memory Agent   | Persistencia            |
-| Logger Agent   | Observabilidad          |
-| Report Agent   | Reportería              |
-
----
-
-# 🔍 Sistema de Inteligencia de Mercado
-
-ORION utiliza Google Shopping mediante SERPAPI.
-
-### Estrategias de búsqueda:
+Para maximizar la recuperación de información, el sistema implementa múltiples estrategias de búsqueda:
 
 ```text
 Producto + Chile
 Producto
 Producto + precio
-Producto + gpu
+Producto + GPU
 Producto + graphics card
 ```
 
-### Recuperación automática:
+Además, el sistema incorpora:
 
-* Corrección RTX ↔ GTX.
-* Fallback de mercado.
-* Base referencial.
-* Filtrado estadístico.
-* Recuperación ante errores.
+* Corrección automática de nombres.
+* Recuperación ante búsquedas vacías.
+* Bases referenciales.
+* Validación de resultados.
+* Filtrado inteligente.
 
 ---
 
-# 📊 Eliminación de Outliers
+# 📊 Eliminación de Valores Atípicos
 
-ORION implementa el algoritmo estadístico IQR.
+ORION implementa el algoritmo estadístico IQR (Interquartile Range) para eliminar precios anómalos.
 
 ```text
 Q1 = Percentil 25
@@ -176,39 +174,38 @@ Mínimo = Q1 − 1.5(IQR)
 Máximo = Q3 + 1.5(IQR)
 ```
 
-Este método elimina:
+Este mecanismo permite eliminar:
 
-* Productos erróneos.
+* Productos incorrectos.
 * Equipos armados.
-* Bundles.
+* Combos comerciales.
+* Accesorios.
 * Precios anómalos.
-* Resultados irreales.
+* Resultados erróneos.
 
 ---
 
-# 💰 Motor de Pricing
+# 💰 Motor de Estrategias Comerciales
 
-El sistema calcula:
+El sistema calcula automáticamente:
 
 ```text
-Costo total
+Costo Total
 =
-Costo compra + envío
+Costo de Compra + Costo de Envío
 ```
 
 ```text
-Precio mínimo rentable
+Precio Mínimo
 =
-Costo total × margen objetivo
+Costo Total × Margen Objetivo
 ```
 
-### Estrategias implementadas
+El sistema implementa tres estrategias comerciales.
 
-#### Competitivo
+## Estrategia Competitiva
 
-```text
-Precio mínimo ≤ 85% mercado
-```
+Aplicada cuando el precio calculado es significativamente inferior al mercado.
 
 Objetivo:
 
@@ -216,129 +213,196 @@ Objetivo:
 
 ---
 
-#### Mercado
+## Estrategia de Mercado
 
-```text
-Precio mínimo ≈ mercado
-```
+Aplicada cuando el precio calculado es similar al mercado.
 
 Objetivo:
 
-* Mantener equilibrio.
+* Mantener equilibrio comercial.
 
 ---
 
-#### Supervivencia
+## Estrategia de Supervivencia
 
-```text
-Costo > mercado
-```
+Aplicada cuando el costo supera el precio promedio del mercado.
 
 Objetivo:
 
-* Mantener rentabilidad mínima.
+* Garantizar rentabilidad mínima.
 
 ---
 
-# ⚠ Sistema de Riesgo
+# ⚠ Sistema de Evaluación de Riesgo
 
-Variables evaluadas:
+ORION evalúa múltiples variables comerciales:
 
 * Competencia.
 * Rentabilidad.
 * Margen.
-* Factibilidad.
+* Factibilidad comercial.
+* Condiciones del mercado.
 
-Clasificación:
+La clasificación del riesgo se realiza mediante puntajes.
 
-| Score  | Riesgo |
-| ------ | ------ |
-| 80-100 | Bajo   |
-| 60-79  | Medio  |
-| 0-59   | Alto   |
+| Puntaje  | Riesgo |
+| -------- | ------ |
+| 80 - 100 | Bajo   |
+| 60 - 79  | Medio  |
+| 0 - 59   | Alto   |
+
+---
+
+# 💾 Sistema de Memoria
+
+El sistema mantiene persistencia local de información para permitir:
+
+* Historial de consultas.
+* Recuperación de información.
+* Auditoría.
+* Trazabilidad.
+
+Archivos utilizados:
+
+```text
+data/
+    memory.json
+```
+
+---
+
+# 📈 Sistema de Observabilidad y Monitoreo
+
+ORION incorpora mecanismos de observabilidad para supervisar el comportamiento del sistema.
+
+La plataforma registra:
+
+* Consultas realizadas.
+* Latencia.
+* Errores.
+* Rendimiento.
+* Operaciones ejecutadas.
+
+Archivos utilizados:
+
+```text
+logs/
+    orion_logs.csv
+```
+
+---
+
+# 📊 Panel de Monitoreo
+
+El sistema incorpora un panel de monitoreo desarrollado mediante Streamlit.
+
+El panel permite visualizar:
+
+* Historial de consultas.
+* Latencias.
+* Rendimiento del sistema.
+* Errores.
+* Métricas operacionales.
+
+### Ejecución del panel:
+
+```bash
+streamlit run dashboard.py
+```
+
+---
+
+# 📄 Generación Automática de Reportes
+
+ORION genera automáticamente reportes ejecutivos con:
+
+* Información del producto.
+* Precio de mercado.
+* Estrategia comercial.
+* Evaluación de riesgo.
+* Justificación.
+* Métricas operacionales.
+
+Los reportes son almacenados en:
+
+```text
+reports/
+```
 
 ---
 
 # 🛡 Validaciones Implementadas
 
-### Producto
+## Validaciones de entrada
 
-* Productos imposibles.
-* Correcciones automáticas.
-* Coincidencia inteligente.
-
-### Mercado
-
-* Eliminación de ruido.
-* Filtrado de notebooks.
-* Filtrado de PC gamer.
-* Filtrado de bundles.
-
-### Usuario
-
+* Producto vacío.
 * Costos negativos.
-* Márgenes inválidos.
-* Valores extremos.
+* Márgenes negativos.
+* Márgenes excesivos.
+
+## Validaciones comerciales
+
+* Productos inexistentes.
+* Productos imposibles.
+* Resultados anómalos.
+* Productos incorrectos.
+
+## Validaciones estadísticas
+
+* Eliminación de valores atípicos.
+* Validación de competencia.
+* Filtrado de ruido.
 
 ---
 
-# 💾 Persistencia
+# 🔄 Recuperación Ante Errores
 
-```text
-data/
-    memory.json
+ORION implementa mecanismos de resiliencia mediante:
 
-logs/
-    orion_logs.csv
-
-reports/
-    reportes PDF
-```
+* Búsquedas alternativas.
+* Corrección automática.
+* Bases referenciales.
+* Recuperación de consultas.
+* Manejo de excepciones.
+* Registro de errores.
 
 ---
 
-# 📄 Reportes
+# 🖥 Interfaz Principal
 
-ORION genera automáticamente:
-
-* Reporte comercial.
-* Estrategia aplicada.
-* Evaluación de riesgo.
-* Justificación.
-* Métricas de rendimiento.
-* Reporte PDF.
-
----
-
-# 🖥 Interfaz Gráfica
-
-Desarrollada utilizando:
-
-```text
-CustomTkinter
-```
+La interfaz principal fue desarrollada utilizando CustomTkinter.
 
 Características:
 
 * Tema oscuro.
-* Indicadores de estado.
+* Interfaz amigable.
 * Procesamiento asíncrono.
+* Indicadores de estado.
 * Manejo de errores.
-* Reportes interactivos.
+* Visualización de resultados.
+
+### Ejecución:
+
+```bash
+python app.py
+```
 
 ---
 
 # 📚 Tecnologías Utilizadas
 
-| Tecnología    | Uso                 |
-| ------------- | ------------------- |
-| Python 3.11   | Backend             |
-| CustomTkinter | GUI                 |
-| SERPAPI       | Market Intelligence |
-| ReportLab     | PDF                 |
-| JSON          | Persistencia        |
-| CSV           | Logging             |
-| Threading     | Paralelismo         |
+| Tecnología    | Función                   |
+| ------------- | ------------------------- |
+| Python 3.11   | Desarrollo principal      |
+| CustomTkinter | Interfaz gráfica          |
+| Streamlit     | Monitoreo                 |
+| SERPAPI       | Inteligencia de mercado   |
+| ReportLab     | Reportes                  |
+| JSON          | Persistencia              |
+| CSV           | Observabilidad            |
+| Threading     | Procesamiento concurrente |
+| Git           | Control de versiones      |
+| GitHub        | Repositorio               |
 
 ---
 
@@ -382,13 +446,29 @@ python -m venv venv
 venv\Scripts\activate
 
 pip install -r requirements.txt
+```
 
+---
+
+# ▶ Ejecución
+
+## Interfaz principal
+
+```bash
 python app.py
+```
+
+## Panel de monitoreo
+
+```bash
+streamlit run dashboard.py
 ```
 
 ---
 
 # 🧪 Casos de Prueba
+
+Ejemplos de productos utilizados:
 
 ```text
 RTX 4060
@@ -396,6 +476,7 @@ RTX 5070
 RTX 4090
 GTX 1650
 Ryzen 9800X3D
+Ryzen 7600
 iPhone 17
 Samsung Galaxy S26
 PlayStation 5 Pro
@@ -403,34 +484,30 @@ PlayStation 5 Pro
 
 ---
 
-# 📈 Características Implementadas
+# 📈 Funcionalidades Implementadas
 
-✅ Multi-Agent System
-✅ Strategic Pricing
-✅ Market Intelligence
-✅ SERPAPI Integration
-✅ Statistical Filtering
-✅ Outlier Detection
-✅ Risk Analysis
-✅ Memory System
-✅ Logger System
-✅ Dashboard
-✅ PDF Reports
-✅ Recovery System
-✅ Reference Database
-✅ Error Handling
-✅ Persistence Layer
+✅ Arquitectura multiagente
+✅ Inteligencia de mercado
+✅ Estrategias comerciales
+✅ Evaluación de riesgo
+✅ Eliminación de valores atípicos
+✅ Recuperación automática
+✅ Persistencia
+✅ Observabilidad
+✅ Panel de monitoreo
+✅ Reportes automáticos
+✅ Manejo de errores
+✅ Validaciones avanzadas
 
 ---
 
-# 🔮 Mejoras Futuras
+# 🔮 Trabajo Futuro
 
-* Machine Learning Predictivo.
-* Forecasting de precios.
-* Integración ERP.
-* Base de datos SQL.
+* Incorporación de aprendizaje automático.
+* Predicción de precios.
+* Integración con bases de datos.
+* Servicios web.
 * API REST.
-* Dashboard web.
 * Analítica avanzada.
 
 ---
