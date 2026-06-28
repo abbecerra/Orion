@@ -1,312 +1,451 @@
-# 🧠💼 ORION v2 — Sistema Inteligente de Análisis Estratégico Empresarial
+# 🧠 ORION AI
 
-## 📌 Descripción
-ORION v2 es un agente inteligente basado en inteligencia artificial diseñado para realizar análisis estratégicos empresariales y de mercado.
+<div align="center">
 
-El sistema simula el comportamiento de una consultora estratégica empresarial, permitiendo evaluar organizaciones, identificar riesgos competitivos, analizar fortalezas y debilidades, comparar empresas reales y generar recomendaciones estratégicas fundamentadas.
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![CustomTkinter](https://img.shields.io/badge/GUI-CustomTkinter-green)
+![SERPAPI](https://img.shields.io/badge/Market-SERPAPI-red)
+![PDF](https://img.shields.io/badge/Reports-PDF-orange)
+![Status](https://img.shields.io/badge/Status-Production-success)
 
-La solución implementa una arquitectura híbrida basada en Retrieval-Augmented Generation (RAG), combinando recuperación de conocimiento interno, búsqueda web externa, memoria conversacional y generación de respuestas mediante modelos de lenguaje.
+### Plataforma Inteligente de Análisis Estratégico de Precios
 
-Además, el sistema incorpora una interfaz gráfica de escritorio, permitiendo una experiencia más profesional e intuitiva para el usuario.
+**Autor:** Abraham Becerra Muñoz
+**Carrera:** Ingeniería en Informática
+**Institución:** Duoc UC
+**Asignatura:** Ingeniería de Soluciones de Software con Inteligencia Artificial
 
----
-
-## 🎯 Objetivo del proyecto
-Desarrollar un agente inteligente organizacional capaz de apoyar procesos de análisis estratégico empresarial mediante inteligencia artificial, recuperación contextual, memoria conversacional y herramientas externas de consulta.
-
-El proyecto busca aplicar conceptos de:
-
-- agentes inteligentes
-- planificación
-- orquestación
-- retrieval augmented generation (RAG)
-- memoria contextual
-- interfaces de usuario
+</div>
 
 ---
 
-## ⚙️ Funcionamiento del sistema
-El flujo de funcionamiento de ORION v2 es el siguiente:
+# 📌 Descripción del Proyecto
 
-1. El usuario ingresa una consulta desde la interfaz gráfica
-2. El sistema analiza el tipo de consulta
-3. Determina dinámicamente qué fuente utilizar:
-   - Base de conocimiento interna (FAISS)
-   - Búsqueda web externa (DuckDuckGo)
-4. Recupera el contexto relevante
-5. Integra memoria conversacional cuando corresponde
-6. Construye un prompt estratégico
-7. Envía la consulta al modelo LLM
-8. Genera una respuesta empresarial estructurada
+ORION AI es una plataforma inteligente orientada a la automatización de procesos de análisis comercial y pricing estratégico.
 
----
+El sistema integra múltiples componentes de inteligencia artificial, análisis estadístico y recuperación de información de mercado para generar recomendaciones comerciales automáticas basadas en datos reales.
 
-## 🧠 Modelo utilizado
-ORION v2 utiliza un modelo de lenguaje ejecutado localmente mediante **Ollama**, específicamente:
+La plataforma permite:
 
-**Modelo principal:**
-- Llama 3
-
-Para generación de embeddings semánticos:
-
-**Modelo de embeddings:**
-- sentence-transformers/all-MiniLM-L6-v2
+* Obtener precios reales desde internet.
+* Analizar competencia.
+* Determinar estrategias comerciales.
+* Calcular precios recomendados.
+* Evaluar riesgos comerciales.
+* Generar reportes ejecutivos.
+* Mantener historial y memoria de análisis.
 
 ---
 
-## 📌 Justificación técnica
-La arquitectura fue seleccionada considerando:
+# 🎯 Objetivos
 
-- ejecución local sin depender de APIs pagadas
-- mayor reproducibilidad académica
-- privacidad de los datos
-- flexibilidad para integrar múltiples herramientas
-- bajo costo operativo
-- facilidad de expansión futura
+## Objetivo General
 
----
+Desarrollar una plataforma inteligente capaz de asistir procesos de pricing mediante técnicas de inteligencia artificial y análisis de mercado automatizado.
 
-## 🧠 Memoria utilizada
-ORION implementa memoria conversacional de corto plazo mediante:
+## Objetivos Específicos
 
-**ConversationBufferMemory**
-
-Esto permite:
-
-- recordar interacciones anteriores
-- mantener coherencia contextual
-- generar respuestas más consistentes en consultas relacionadas
-
-### Tipos de memoria
-
-**Memoria de corto plazo**
-- historial conversacional
-- contexto reciente de interacción
-
-**Memoria contextual**
-- recuperación dinámica mediante FAISS
+* Automatizar el análisis de precios.
+* Reducir errores humanos.
+* Incorporar inteligencia comercial.
+* Implementar validaciones automáticas.
+* Generar recomendaciones de pricing.
+* Evaluar riesgo de mercado.
+* Producir reportes ejecutivos.
 
 ---
 
-## 📋 Planificación implementada
-ORION utiliza planificación condicional.
-
-El sistema analiza la intención de la consulta y decide dinámicamente qué herramienta utilizar.
-
-### Ejemplos
-**Consulta interna**
-```text
-Analiza TechZone
-```
-
-→ usa FAISS
-
----
-
-**Consulta externa**
-```text
-Compara Samsung con Apple
-```
-
-→ usa búsqueda web
-
----
-
-Este enfoque permite optimizar:
-
-- velocidad
-- precisión
-- uso eficiente del contexto
-
----
-
-## 🔄 Orquestación del sistema
-La orquestación del sistema se realiza mediante **LangChain**.
-
-LangChain coordina:
-
-- carga documental
-- fragmentación de texto
-- embeddings
-- base vectorial FAISS
-- memoria conversacional
-- búsqueda externa
-- construcción de prompts
-- conexión con LLM
-
-Esto permite una arquitectura modular, organizada y mantenible.
-
----
-
-## 🏗️ Arquitectura del sistema
+# 🧠 Arquitectura del Sistema
 
 ```text
-Usuario
-   ↓
-Interfaz gráfica (CustomTkinter)
-   ↓
-Planificador de consulta
-   ↓
-¿Consulta interna o externa?
-   ↓
-┌───────────────┬───────────────┐
-│               │               │
-FAISS        DuckDuckGo Web Search
-│               │
-└───────────────┴───────────────┘
-   ↓
-Memoria conversacional
-   ↓
-Construcción de prompt
-   ↓
-Llama 3 (Ollama)
-   ↓
-Respuesta estratégica
+                     USUARIO
+                         │
+                         ▼
+                ┌────────────────┐
+                │ ORION GUI      │
+                └────────┬───────┘
+                         │
+                         ▼
+                ┌────────────────┐
+                │ AGENTE ORION   │
+                └────────┬───────┘
+                         │
+       ┌─────────────────┼─────────────────┐
+       ▼                 ▼                 ▼
+ Market Search     Pricing Engine     Risk Engine
+       │                 │                 │
+       └──────────┬──────┴──────┬──────────┘
+                  ▼             ▼
+               Memory         Logger
+                  │
+                  ▼
+            PDF Generator
 ```
 
 ---
 
-## 🛠️ Tecnologías utilizadas
-- Python
-- LangChain
-- LangChain Community
-- FAISS
-- Sentence Transformers
-- Hugging Face
-- Ollama
-- Llama 3
-- DuckDuckGo Search (DDGS)
-- CustomTkinter
+# ⚙ Flujo Operacional
+
+```text
+Usuario ingresa producto
+            │
+            ▼
+Validación de entrada
+            │
+            ▼
+Corrección automática
+            │
+            ▼
+Búsqueda Google Shopping
+            │
+            ▼
+Filtrado inteligente
+            │
+            ▼
+Eliminación de outliers
+            │
+            ▼
+Análisis de mercado
+            │
+            ▼
+Estrategia comercial
+            │
+            ▼
+Evaluación de riesgo
+            │
+            ▼
+Generación PDF
+            │
+            ▼
+Persistencia
+```
 
 ---
 
-## 📂 Estructura del proyecto
+# 🤖 Sistema Multiagente
+
+ORION implementa una arquitectura basada en agentes especializados.
+
+| Agente         | Función                 |
+| -------------- | ----------------------- |
+| Planner        | Planificación           |
+| Market Search  | Inteligencia de mercado |
+| Pricing Engine | Optimización de precios |
+| Risk Engine    | Evaluación de riesgo    |
+| Memory Agent   | Persistencia            |
+| Logger Agent   | Observabilidad          |
+| Report Agent   | Reportería              |
+
+---
+
+# 🔍 Sistema de Inteligencia de Mercado
+
+ORION utiliza Google Shopping mediante SERPAPI.
+
+### Estrategias de búsqueda:
+
+```text
+Producto + Chile
+Producto
+Producto + precio
+Producto + gpu
+Producto + graphics card
+```
+
+### Recuperación automática:
+
+* Corrección RTX ↔ GTX.
+* Fallback de mercado.
+* Base referencial.
+* Filtrado estadístico.
+* Recuperación ante errores.
+
+---
+
+# 📊 Eliminación de Outliers
+
+ORION implementa el algoritmo estadístico IQR.
+
+```text
+Q1 = Percentil 25
+Q3 = Percentil 75
+
+IQR = Q3 − Q1
+
+Mínimo = Q1 − 1.5(IQR)
+Máximo = Q3 + 1.5(IQR)
+```
+
+Este método elimina:
+
+* Productos erróneos.
+* Equipos armados.
+* Bundles.
+* Precios anómalos.
+* Resultados irreales.
+
+---
+
+# 💰 Motor de Pricing
+
+El sistema calcula:
+
+```text
+Costo total
+=
+Costo compra + envío
+```
+
+```text
+Precio mínimo rentable
+=
+Costo total × margen objetivo
+```
+
+### Estrategias implementadas
+
+#### Competitivo
+
+```text
+Precio mínimo ≤ 85% mercado
+```
+
+Objetivo:
+
+* Maximizar competitividad.
+
+---
+
+#### Mercado
+
+```text
+Precio mínimo ≈ mercado
+```
+
+Objetivo:
+
+* Mantener equilibrio.
+
+---
+
+#### Supervivencia
+
+```text
+Costo > mercado
+```
+
+Objetivo:
+
+* Mantener rentabilidad mínima.
+
+---
+
+# ⚠ Sistema de Riesgo
+
+Variables evaluadas:
+
+* Competencia.
+* Rentabilidad.
+* Margen.
+* Factibilidad.
+
+Clasificación:
+
+| Score  | Riesgo |
+| ------ | ------ |
+| 80-100 | Bajo   |
+| 60-79  | Medio  |
+| 0-59   | Alto   |
+
+---
+
+# 🛡 Validaciones Implementadas
+
+### Producto
+
+* Productos imposibles.
+* Correcciones automáticas.
+* Coincidencia inteligente.
+
+### Mercado
+
+* Eliminación de ruido.
+* Filtrado de notebooks.
+* Filtrado de PC gamer.
+* Filtrado de bundles.
+
+### Usuario
+
+* Costos negativos.
+* Márgenes inválidos.
+* Valores extremos.
+
+---
+
+# 💾 Persistencia
+
+```text
+data/
+    memory.json
+
+logs/
+    orion_logs.csv
+
+reports/
+    reportes PDF
+```
+
+---
+
+# 📄 Reportes
+
+ORION genera automáticamente:
+
+* Reporte comercial.
+* Estrategia aplicada.
+* Evaluación de riesgo.
+* Justificación.
+* Métricas de rendimiento.
+* Reporte PDF.
+
+---
+
+# 🖥 Interfaz Gráfica
+
+Desarrollada utilizando:
+
+```text
+CustomTkinter
+```
+
+Características:
+
+* Tema oscuro.
+* Indicadores de estado.
+* Procesamiento asíncrono.
+* Manejo de errores.
+* Reportes interactivos.
+
+---
+
+# 📚 Tecnologías Utilizadas
+
+| Tecnología    | Uso                 |
+| ------------- | ------------------- |
+| Python 3.11   | Backend             |
+| CustomTkinter | GUI                 |
+| SERPAPI       | Market Intelligence |
+| ReportLab     | PDF                 |
+| JSON          | Persistencia        |
+| CSV           | Logging             |
+| Threading     | Paralelismo         |
+
+---
+
+# 📂 Estructura del Proyecto
 
 ```text
 ORION/
-│── main.py
-│── app.py
-│── competidores.txt
-│── requirements.txt
-│── README.md
+
+├── assets/
+├── data/
+├── logs/
+├── reports/
+
+├── agent.py
+├── app.py
+├── dashboard.py
+├── logger.py
+├── market_search.py
+├── memory.py
+├── planner.py
+├── recommendations.py
+├── report_generator.py
+├── tools.py
+
+├── requirements.txt
+├── README.md
+└── .gitignore
 ```
 
 ---
 
-## 🚀 Instalación y ejecución
+# 🚀 Instalación
 
-### 1. Clonar repositorio
 ```bash
-git clone https://github.com/abbecerra/Orion.git
+git clone https://github.com/abbecerra/Orion
+
 cd Orion
-```
 
----
-
-### 2. Crear entorno virtual
-```bash
 python -m venv venv
-```
 
----
-
-### 3. Activar entorno virtual (Windows)
-```bash
 venv\Scripts\activate
-```
 
----
+pip install -r requirements.txt
 
-### 4. Instalar dependencias
-```bash
-python -m pip install -r requirements.txt
-```
-
----
-
-### 5. Instalar Ollama
-Descargar desde:
-
-https://ollama.com
-
----
-
-### 6. Descargar modelo
-```bash
-ollama pull llama3
-```
-
----
-
-### 7. Ejecutar aplicación
-```bash
 python app.py
 ```
 
 ---
 
-## 💬 Ejemplos de uso
+# 🧪 Casos de Prueba
 
-### Consultas internas
-- Analiza TechZone
-- ¿Qué riesgos presenta Econotech?
-- Compara LuxPhone con TechZone
-
-### Consultas externas
-- Analiza Tesla
-- Compara Samsung con Apple
-- Analiza Amazon
-- Evalúa Microsoft frente a Google
-
----
-
-## 📊 Ejemplo de respuesta
 ```text
-1. Diagnóstico general
-2. Fortalezas
-3. Debilidades
-4. Riesgos competitivos
-5. Recomendación estratégica
+RTX 4060
+RTX 5070
+RTX 4090
+GTX 1650
+Ryzen 9800X3D
+iPhone 17
+Samsung Galaxy S26
+PlayStation 5 Pro
 ```
 
 ---
 
-## 📈 Optimizaciones implementadas
-El sistema incorpora mejoras para eficiencia:
+# 📈 Características Implementadas
 
-- retrieval selectivo
-- planificación condicional
-- memoria contextual controlada
-- separación entre consultas internas y externas
-- control básico anti alucinación
-
----
-
-## 🔮 Posibles mejoras futuras
-- persistencia de memoria a largo plazo
-- integración con APIs empresariales
-- dashboards analíticos
-- exportación PDF
-- integración con bases SQL
-- multiagentes especializados
-- scoring cuantitativo avanzado
+✅ Multi-Agent System
+✅ Strategic Pricing
+✅ Market Intelligence
+✅ SERPAPI Integration
+✅ Statistical Filtering
+✅ Outlier Detection
+✅ Risk Analysis
+✅ Memory System
+✅ Logger System
+✅ Dashboard
+✅ PDF Reports
+✅ Recovery System
+✅ Reference Database
+✅ Error Handling
+✅ Persistence Layer
 
 ---
 
-## 👤 Autor
-**Abraham Becerra**
+# 🔮 Mejoras Futuras
 
+* Machine Learning Predictivo.
+* Forecasting de precios.
+* Integración ERP.
+* Base de datos SQL.
+* API REST.
+* Dashboard web.
+* Analítica avanzada.
 
 ---
 
-## 📌 Reproducibilidad
-El proyecto incluye:
+# 👨‍💻 Autor
 
-✅ código fuente completo  
-✅ requirements con versiones  
-✅ instrucciones de instalación  
-✅ modelo documentado  
-✅ ejecución local reproducible  
-✅ interfaz gráfica funcional  
+**Abraham Becerra Muñoz**
 
-Esto permite que terceros puedan ejecutar el sistema fuera del entorno original.
+Ingeniería en Informática
+Duoc UC
+
+---
+
+# 📜 Licencia
+
+Proyecto desarrollado con fines académicos para la asignatura:
+
+**Ingeniería de Soluciones de Software con Inteligencia Artificial**

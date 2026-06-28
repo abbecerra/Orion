@@ -1,0 +1,226 @@
+[
+    {
+        "consulta": "RTX 4060",
+        "respuesta": "Precio recomendado: 349990"
+    },
+    {
+        "consulta": "RTX 4060",
+        "respuesta": "{'producto': 'RTX 4060', 'precio_mercado': 349990, 'tienda': 'PC Factory', 'envio': 'Blue Express', 'costo_envio': 4500, 'precio_recomendado': 355625, 'utilidad': 71125, 'riesgo': 'MEDIO', 'score': 75}"
+    },
+    {
+        "consulta": "RTX 4060",
+        "respuesta": "{'producto': 'RTX 4060', 'precio_mercado': 349990, 'tienda': 'PC Factory', 'envio': 'Blue Express', 'costo_envio': 4500, 'precio_recomendado': 318125, 'utilidad': 63625, 'riesgo': 'MEDIO', 'score': 75}"
+    },
+    {
+        "consulta": "RTX 4070",
+        "respuesta": "{'producto': 'RTX 4070', 'precio_mercado': 599990, 'tienda': 'SP Digital', 'envio': 'Blue Express', 'costo_envio': 4500, 'precio_recomendado': 318125, 'utilidad': 63625, 'riesgo': 'MEDIO', 'score': 55}"
+    },
+    {
+        "consulta": "Ryzen 7 7800X3D",
+        "respuesta": "{'producto': 'Ryzen 7 7800X3D', 'precio_mercado': 429990, 'tienda': 'PC Factory', 'envio': 'Blue Express', 'costo_envio': 4500, 'precio_recomendado': 318125, 'utilidad': 63625, 'riesgo': 'MEDIO', 'score': 75}"
+    },
+    {
+        "consulta": "iPhone 16",
+        "respuesta": "{'producto': 'iPhone 16', 'precio_mercado': 999990, 'tienda': 'MercadoLibre Chile', 'envio': 'Blue Express', 'costo_envio': 4500, 'precio_recomendado': 318125, 'utilidad': 63625, 'riesgo': 'MEDIO', 'score': 55}"
+    },
+    {
+        "consulta": "RTX 4060",
+        "respuesta": "{'producto': 'RTX 4060', 'precio_mercado': 349990, 'precio_minimo': 318125, 'precio_recomendado': 342990, 'estrategia': 'Mercado', 'utilidad': 88490, 'tienda': 'PC Factory', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'latencia_total': 9.11}"
+    },
+    {
+        "consulta": "RTX 4070",
+        "respuesta": "{'producto': 'RTX 4070', 'precio_mercado': 599990, 'precio_minimo': 318125, 'precio_recomendado': 569990, 'estrategia': 'Competitivo', 'utilidad': 315490, 'tienda': 'SP Digital', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 55, 'latencia_total': 8.14}"
+    },
+    {
+        "consulta": "Ryzen 7 7800X3D",
+        "respuesta": "{'producto': 'Ryzen 7 7800X3D', 'precio_mercado': 429990, 'precio_minimo': 318125, 'precio_recomendado': 408490, 'estrategia': 'Competitivo', 'utilidad': 153990, 'tienda': 'PC Factory', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'latencia_total': 4.85}"
+    },
+    {
+        "consulta": "iPhone 16",
+        "respuesta": "{'producto': 'iPhone 16', 'precio_mercado': 999990, 'precio_minimo': 318125, 'precio_recomendado': 949990, 'estrategia': 'Competitivo', 'utilidad': 695490, 'tienda': 'MercadoLibre Chile', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 55, 'latencia_total': 7.08}"
+    },
+    {
+        "consulta": "RTX 4060",
+        "respuesta": "{'producto': 'RTX 4060', 'precio_mercado': 349990, 'precio_minimo': 355625, 'precio_recomendado': 355625, 'estrategia': 'Supervivencia', 'utilidad': 71125, 'tienda': 'PC Factory', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'latencia_total': 6.95}"
+    },
+    {
+        "consulta": "RTX 4060",
+        "respuesta": "{'producto': 'RTX 4060', 'precio_mercado': 349990, 'precio_minimo': 318125, 'precio_recomendado': 342990, 'estrategia': 'Mercado', 'utilidad': 88490, 'tienda': 'PC Factory', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'latencia_total': 7.69}"
+    },
+    {
+        "consulta": "RTX 4070",
+        "respuesta": "{'producto': 'RTX 4070', 'precio_mercado': 599990, 'precio_minimo': 318125, 'precio_recomendado': 569990, 'estrategia': 'Competitivo', 'utilidad': 315490, 'tienda': 'SP Digital', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 55, 'latencia_total': 7.5}"
+    },
+    {
+        "consulta": "Ryzen 7 7800X3D",
+        "respuesta": "{'producto': 'Ryzen 7 7800X3D', 'precio_mercado': 429990, 'precio_minimo': 318125, 'precio_recomendado': 408490, 'estrategia': 'Competitivo', 'utilidad': 153990, 'tienda': 'PC Factory', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'latencia_total': 4.78}"
+    },
+    {
+        "consulta": "iPhone 16",
+        "respuesta": "{'producto': 'iPhone 16', 'precio_mercado': 999990, 'precio_minimo': 318125, 'precio_recomendado': 949990, 'estrategia': 'Competitivo', 'utilidad': 695490, 'tienda': 'MercadoLibre Chile', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 55, 'latencia_total': 6.89}"
+    },
+    {
+        "consulta": "RTX 4060",
+        "respuesta": "{'producto': 'RTX 4060', 'precio_mercado': 349990, 'precio_minimo': 318125, 'precio_recomendado': 342990, 'estrategia': 'Mercado', 'utilidad': 88490, 'tienda': 'PC Factory', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'latencia_total': 9.91, 'reporte': 'reports/reporte_20260626_132244.txt'}"
+    },
+    {
+        "consulta": "RTX 4070",
+        "respuesta": "{'producto': 'RTX 4070', 'precio_mercado': 599990, 'precio_minimo': 318125, 'precio_recomendado': 569990, 'estrategia': 'Competitivo', 'utilidad': 315490, 'tienda': 'SP Digital', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 55, 'latencia_total': 6.1, 'reporte': 'reports/reporte_20260626_132250.txt'}"
+    },
+    {
+        "consulta": "Ryzen 7 7800X3D",
+        "respuesta": "{'producto': 'Ryzen 7 7800X3D', 'precio_mercado': 429990, 'precio_minimo': 318125, 'precio_recomendado': 408490, 'estrategia': 'Competitivo', 'utilidad': 153990, 'tienda': 'PC Factory', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'latencia_total': 6.44, 'reporte': 'reports/reporte_20260626_132256.txt'}"
+    },
+    {
+        "consulta": "iPhone 16",
+        "respuesta": "{'producto': 'iPhone 16', 'precio_mercado': 999990, 'precio_minimo': 318125, 'precio_recomendado': 949990, 'estrategia': 'Competitivo', 'utilidad': 695490, 'tienda': 'MercadoLibre Chile', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 55, 'latencia_total': 5.41, 'reporte': 'reports/reporte_20260626_132302.txt'}"
+    },
+    {
+        "consulta": "RTX 4060",
+        "respuesta": "{'producto': 'RTX 4060', 'precio_mercado': 349990, 'precio_minimo': 318125, 'precio_recomendado': 342990, 'estrategia': 'Mercado', 'utilidad': 88490, 'tienda': 'PC Factory', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'latencia_total': 5.93, 'reporte': 'reports/reporte_20260626_132518.pdf'}"
+    },
+    {
+        "consulta": "RTX 4070",
+        "respuesta": "{'producto': 'RTX 4070', 'precio_mercado': 599990, 'precio_minimo': 318125, 'precio_recomendado': 569990, 'estrategia': 'Competitivo', 'utilidad': 315490, 'tienda': 'SP Digital', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 55, 'latencia_total': 4.82, 'reporte': 'reports/reporte_20260626_132523.pdf'}"
+    },
+    {
+        "consulta": "Ryzen 7 7800X3D",
+        "respuesta": "{'producto': 'Ryzen 7 7800X3D', 'precio_mercado': 429990, 'precio_minimo': 318125, 'precio_recomendado': 408490, 'estrategia': 'Competitivo', 'utilidad': 153990, 'tienda': 'PC Factory', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'latencia_total': 4.91, 'reporte': 'reports/reporte_20260626_132528.pdf'}"
+    },
+    {
+        "consulta": "iPhone 16",
+        "respuesta": "{'producto': 'iPhone 16', 'precio_mercado': 999990, 'precio_minimo': 318125, 'precio_recomendado': 949990, 'estrategia': 'Competitivo', 'utilidad': 695490, 'tienda': 'MercadoLibre Chile', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 55, 'latencia_total': 6.28, 'reporte': 'reports/reporte_20260626_132534.pdf'}"
+    },
+    {
+        "consulta": "RTX 4060",
+        "respuesta": "{'producto': 'RTX 4060', 'precio_mercado': 349990, 'precio_minimo': 318125, 'precio_recomendado': 342990, 'estrategia': 'Mercado', 'utilidad': 88490, 'tienda': 'PC Factory', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'latencia_total': 9.1, 'reporte': 'reports/reporte_20260626_133350.pdf'}"
+    },
+    {
+        "consulta": "RTX 4070",
+        "respuesta": "{'producto': 'RTX 4070', 'precio_mercado': 599990, 'precio_minimo': 318125, 'precio_recomendado': 569990, 'estrategia': 'Competitivo', 'utilidad': 315490, 'tienda': 'SP Digital', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 55, 'latencia_total': 6.14, 'reporte': 'reports/reporte_20260626_133614.pdf'}"
+    },
+    {
+        "consulta": "RTX 4060",
+        "respuesta": "{'producto': 'RTX 4060', 'precio_mercado': 349990, 'precio_minimo': 318125, 'precio_recomendado': 342990, 'estrategia': 'Mercado', 'utilidad': 88490, 'tienda': 'PC Factory', 'mercado': 'Chile', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'justificacion': 'Se utilizó una estrategia de mercado para mantener competitividad y rentabilidad.', 'latencia_total': 12.17, 'reporte': 'reports/reporte_20260626_142542.pdf'}"
+    },
+    {
+        "consulta": "RTX 5070",
+        "respuesta": "{'producto': 'RTX 5070', 'precio_mercado': 917703580, 'precio_minimo': 68125, 'precio_recomendado': 871818401, 'estrategia': 'Competitivo', 'utilidad': 871763901, 'tienda': 'Lancenter Chile SPA', 'mercado': 'Global', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'justificacion': 'Se utilizó una estrategia competitiva debido a que el mercado presenta un amplio margen respecto al costo.', 'latencia_total': 6.28, 'reporte': 'reports/reporte_20260626_142621.pdf'}"
+    },
+    {
+        "consulta": "RTX 4060",
+        "respuesta": "{'producto': 'RTX 4060', 'precio_mercado': 349990, 'precio_minimo': 318125, 'precio_recomendado': 342990, 'estrategia': 'Mercado', 'utilidad': 88490, 'tienda': 'PC Factory', 'mercado': 'Chile', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'justificacion': 'Se utilizó una estrategia de mercado para mantener competitividad y rentabilidad.', 'latencia_total': 9.35, 'reporte': 'reports/reporte_20260626_144939.pdf'}"
+    },
+    {
+        "consulta": "RTX 5070",
+        "respuesta": "{'producto': 'RTX 5070', 'precio_mercado': 879995, 'precio_minimo': 785400, 'precio_recomendado': 862395, 'estrategia': 'Mercado', 'utilidad': 207895, 'tienda': 'Winpy', 'mercado': 'Global', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'justificacion': 'Se utilizó una estrategia de mercado para mantener competitividad y rentabilidad.', 'latencia_total': 5.54, 'reporte': 'reports/reporte_20260626_145006.pdf'}"
+    },
+    {
+        "consulta": "RTX 4060",
+        "respuesta": "{'producto': 'RTX 4060', 'precio_mercado': 349990, 'precio_minimo': 59000, 'precio_recomendado': 332490, 'estrategia': 'Competitivo', 'utilidad': 302990, 'tienda': 'PC Factory', 'mercado': 'Chile', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 60, 'justificacion': 'Se utilizó una estrategia competitiva debido a que el mercado presenta un amplio margen respecto al costo.', 'latencia_total': 5.53, 'reporte': 'reports/reporte_20260626_145056.pdf'}"
+    },
+    {
+        "consulta": "RTX 4060",
+        "respuesta": "{'producto': 'RTX 4060', 'precio_mercado': 349990, 'precio_minimo': 380625, 'precio_recomendado': 380625, 'estrategia': 'Supervivencia', 'utilidad': 76125, 'tienda': 'PC Factory', 'mercado': 'Chile', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'justificacion': 'Se utilizó una estrategia de supervivencia para asegurar la rentabilidad mínima.', 'latencia_total': 6.41, 'reporte': 'reports/reporte_20260626_145317.pdf'}"
+    },
+    {
+        "consulta": "RTX 5070",
+        "respuesta": "{'producto': 'RTX 5070', 'precio_mercado': 879995, 'precio_minimo': 9245400, 'precio_recomendado': 9245400, 'estrategia': 'Supervivencia', 'utilidad': 1540900, 'tienda': 'Winpy', 'mercado': 'Global', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'justificacion': 'Se utilizó una estrategia de supervivencia para asegurar la rentabilidad mínima.', 'latencia_total': 6.67, 'reporte': 'reports/reporte_20260626_145539.pdf'}"
+    },
+    {
+        "consulta": "RTX 5070",
+        "respuesta": "{'producto': 'RTX 5070', 'precio_mercado': 879995, 'precio_minimo': 845400, 'precio_recomendado': 862395, 'estrategia': 'Mercado', 'utilidad': 157895, 'tienda': 'Winpy', 'mercado': 'Global', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'justificacion': 'Se utilizó una estrategia de mercado para mantener competitividad y rentabilidad.', 'latencia_total': 5.74, 'reporte': 'reports/reporte_20260626_145551.pdf'}"
+    },
+    {
+        "consulta": "Ryzen 9800X3D",
+        "respuesta": "{'producto': 'Ryzen 9800X3D', 'precio_mercado': 590990, 'precio_minimo': 545400, 'precio_recomendado': 579170, 'estrategia': 'Mercado', 'utilidad': 124670, 'tienda': 'Tienda MegaBytes', 'mercado': 'Global', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'justificacion': 'Se utilizó una estrategia de mercado para mantener competitividad y rentabilidad.', 'latencia_total': 5.4, 'reporte': 'reports/reporte_20260626_145709.pdf'}"
+    },
+    {
+        "consulta": "RTX 9999",
+        "respuesta": "{'producto': 'RTX 9999', 'precio_mercado': 642490, 'precio_minimo': 545400, 'precio_recomendado': 610365, 'estrategia': 'Competitivo', 'utilidad': 155865, 'tienda': 'MyShop', 'mercado': 'Global', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'justificacion': 'Se utilizó una estrategia competitiva debido a que el mercado presenta un amplio margen respecto al costo.', 'latencia_total': 9.97, 'reporte': 'reports/reporte_20260626_145810.pdf'}"
+    },
+    {
+        "consulta": "RTX 9999",
+        "respuesta": "{'producto': 'RTX 9999', 'precio_mercado': 642490, 'precio_minimo': 318125, 'precio_recomendado': 610365, 'estrategia': 'Competitivo', 'utilidad': 355865, 'tienda': 'MyShop', 'mercado': 'Global', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'justificacion': 'Se utilizó una estrategia competitiva debido a que el mercado presenta un amplio margen respecto al costo.', 'latencia_total': 6.38, 'reporte': 'reports/reporte_20260626_150128.pdf'}"
+    },
+    {
+        "consulta": "Amd ryzen 5",
+        "respuesta": "{'producto': 'Amd ryzen 5', 'precio_mercado': 188535, 'precio_minimo': 318125, 'precio_recomendado': 318125, 'estrategia': 'Supervivencia', 'utilidad': 63625, 'tienda': 'Centrale.cl', 'mercado': 'Global', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'justificacion': 'Se utilizó una estrategia de supervivencia para asegurar la rentabilidad mínima.', 'latencia_total': 13.98, 'reporte': 'reports/reporte_20260626_150652.pdf'}"
+    },
+    {
+        "consulta": "logitech g733",
+        "respuesta": "{'producto': 'logitech g733', 'precio_mercado': 171990, 'precio_minimo': 318125, 'precio_recomendado': 318125, 'estrategia': 'Supervivencia', 'utilidad': 63625, 'tienda': 'Falabella.com', 'mercado': 'Global', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'justificacion': 'Se utilizó una estrategia de supervivencia para asegurar la rentabilidad mínima.', 'latencia_total': 10.22, 'reporte': 'reports/reporte_20260626_150730.pdf'}"
+    },
+    {
+        "consulta": "RTX 4060",
+        "respuesta": "{'producto': 'RTX 4060', 'precio_mercado': 349990, 'precio_minimo': 318125, 'precio_recomendado': 342990, 'estrategia': 'Mercado', 'utilidad': 88490, 'tienda': 'PC Factory', 'mercado': 'Chile', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'justificacion': 'Se utilizó una estrategia de mercado para mantener competitividad y rentabilidad.', 'latencia_total': 0.0, 'reporte': 'reports/reporte_20260627_155538.pdf'}"
+    },
+    {
+        "consulta": "RTX 4070",
+        "respuesta": "{'producto': 'RTX 4070', 'precio_mercado': 599990, 'precio_minimo': 318125, 'precio_recomendado': 569990, 'estrategia': 'Competitivo', 'utilidad': 315490, 'tienda': 'SP Digital', 'mercado': 'Chile', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 55, 'justificacion': 'Se utilizó una estrategia competitiva debido a que el mercado presenta un amplio margen respecto al costo.', 'latencia_total': 0.0, 'reporte': 'reports/reporte_20260627_155543.pdf'}"
+    },
+    {
+        "consulta": "RTX4060",
+        "respuesta": "{'producto': 'RTX4060', 'precio_mercado': 482990, 'precio_minimo': 318125, 'precio_recomendado': 458840, 'estrategia': 'Competitivo', 'utilidad': 204340, 'tienda': 'Paris.cl', 'mercado': 'Global', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'justificacion': 'Se utilizó una estrategia competitiva debido a que el mercado presenta un amplio margen respecto al costo.', 'latencia_total': 54.72, 'reporte': 'reports/reporte_20260627_160344.pdf'}"
+    },
+    {
+        "consulta": "RTX 4060",
+        "respuesta": "{'producto': 'RTX 4060', 'precio_mercado': 349990, 'precio_minimo': 318125, 'precio_recomendado': 342990, 'estrategia': 'Mercado', 'utilidad': 88490, 'tienda': 'PC Factory', 'mercado': 'Chile', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'justificacion': 'Se utilizó una estrategia de mercado para mantener competitividad y rentabilidad.', 'latencia_total': 0.0, 'reporte': 'reports/reporte_20260627_160838.pdf'}"
+    },
+    {
+        "consulta": "RTX4060",
+        "respuesta": "{'producto': 'RTX4060', 'precio_mercado': 482990, 'precio_minimo': 318125, 'precio_recomendado': 458840, 'estrategia': 'Competitivo', 'utilidad': 204340, 'tienda': 'Paris.cl', 'mercado': 'Global', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'justificacion': 'Se utilizó una estrategia competitiva debido a que el mercado presenta un amplio margen respecto al costo.', 'latencia_total': 0.06, 'reporte': 'reports/reporte_20260627_160842.pdf'}"
+    },
+    {
+        "consulta": "RTX4070",
+        "respuesta": "{'producto': 'RTX4070', 'precio_mercado': 808371, 'precio_minimo': 318125, 'precio_recomendado': 767952, 'estrategia': 'Competitivo', 'utilidad': 513452, 'tienda': 'SP Digital', 'mercado': 'Global', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'justificacion': 'Se utilizó una estrategia competitiva debido a que el mercado presenta un amplio margen respecto al costo.', 'latencia_total': 21.82, 'reporte': 'reports/reporte_20260627_160913.pdf'}"
+    },
+    {
+        "consulta": "RTX 4070",
+        "respuesta": "{'producto': 'RTX 4070', 'precio_mercado': 599990, 'precio_minimo': 318125, 'precio_recomendado': 569990, 'estrategia': 'Competitivo', 'utilidad': 315490, 'tienda': 'SP Digital', 'mercado': 'Chile', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 55, 'justificacion': 'Se utilizó una estrategia competitiva debido a que el mercado presenta un amplio margen respecto al costo.', 'latencia_total': 0.0, 'reporte': 'reports/reporte_20260627_182821.pdf'}"
+    },
+    {
+        "consulta": "RTX 4090",
+        "respuesta": "{'producto': 'RTX 4090', 'precio_mercado': 2499990, 'precio_minimo': 318125, 'precio_recomendado': 2374990, 'estrategia': 'Competitivo', 'utilidad': 2120490, 'tienda': 'Base Referencial ORION', 'mercado': 'Global', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'justificacion': 'Se utilizó una estrategia competitiva debido a que el mercado presenta un amplio margen respecto al costo.', 'latencia_total': 0.03, 'reporte': 'reports/reporte_20260627_184305.pdf'}"
+    },
+    {
+        "consulta": "RTX 4090",
+        "respuesta": "{'producto': 'RTX 4090', 'precio_mercado': 2499990, 'precio_minimo': 318125, 'precio_recomendado': 2374990, 'estrategia': 'Competitivo', 'utilidad': 2120490, 'tienda': 'Base Referencial ORION', 'mercado': 'Global', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'justificacion': 'Se utilizó una estrategia competitiva debido a que el mercado presenta un amplio margen respecto al costo.', 'latencia_total': 0.86, 'reporte': 'reports/reporte_20260627_184908.pdf'}"
+    },
+    {
+        "consulta": "RTX 5070",
+        "respuesta": "{'producto': 'RTX 5070', 'precio_mercado': 858230, 'precio_minimo': 318125, 'precio_recomendado': 815318, 'estrategia': 'Competitivo', 'utilidad': 560818, 'tienda': 'MyShop', 'mercado': 'Global', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'justificacion': 'Se utilizó una estrategia competitiva debido a que el mercado presenta un amplio margen respecto al costo.', 'latencia_total': 0.06, 'reporte': 'reports/reporte_20260627_185314.pdf'}"
+    },
+    {
+        "consulta": "RTX 5090",
+        "respuesta": "{'producto': 'RTX 5090', 'precio_mercado': 1999990, 'precio_minimo': 318125, 'precio_recomendado': 1899990, 'estrategia': 'Competitivo', 'utilidad': 1645490, 'tienda': 'Base Referencial ORION', 'mercado': 'Global', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'justificacion': 'Se utilizó una estrategia competitiva debido a que el mercado presenta un amplio margen respecto al costo.', 'latencia_total': 0.04, 'reporte': 'reports/reporte_20260627_185327.pdf'}"
+    },
+    {
+        "consulta": "RTX 5070",
+        "respuesta": "{'producto': 'RTX 5070', 'precio_mercado': 858230, 'precio_minimo': 318125, 'precio_recomendado': 815318, 'estrategia': 'Competitivo', 'utilidad': 560818, 'tienda': 'MyShop', 'mercado': 'Global', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'justificacion': 'Se utilizó una estrategia competitiva debido a que el mercado presenta un amplio margen respecto al costo.', 'latencia_total': 0.05, 'reporte': 'reports/reporte_20260627_185340.pdf'}"
+    },
+    {
+        "consulta": "RTX 5090",
+        "respuesta": "{'producto': 'RTX 5090', 'precio_mercado': 1999990, 'precio_minimo': 1505617, 'precio_recomendado': 1899990, 'estrategia': 'Competitivo', 'utilidad': 695496, 'tienda': 'Base Referencial ORION', 'mercado': 'Global', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'justificacion': 'Se utilizó una estrategia competitiva debido a que el mercado presenta un amplio margen respecto al costo.', 'latencia_total': 0.08, 'reporte': 'reports/reporte_20260627_190029.pdf'}"
+    },
+    {
+        "consulta": "RTX 1660",
+        "respuesta": "{'producto': 'RTX 1660', 'precio_mercado': 362441, 'precio_minimo': 318125, 'precio_recomendado': 355192, 'estrategia': 'Mercado', 'utilidad': 100692, 'tienda': 'mercadolibre.cl', 'mercado': 'Global', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'justificacion': 'Se utilizó una estrategia de mercado para mantener competitividad y rentabilidad.', 'latencia_total': 1.76, 'reporte': 'reports/reporte_20260627_191139.pdf'}"
+    },
+    {
+        "consulta": "RTX 4060",
+        "respuesta": "{'producto': 'RTX 4060', 'precio_mercado': 349990, 'precio_minimo': 318125, 'precio_recomendado': 342990, 'estrategia': 'Mercado', 'utilidad': 88490, 'tienda': 'PC Factory', 'mercado': 'Chile', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'justificacion': 'Se utilizó una estrategia de mercado para mantener competitividad y rentabilidad.', 'latencia_total': 0.0, 'reporte': 'reports/reporte_20260627_193528.pdf'}"
+    },
+    {
+        "consulta": "RTX 4070",
+        "respuesta": "{'producto': 'RTX 4070', 'precio_mercado': 599990, 'precio_minimo': 318125, 'precio_recomendado': 569990, 'estrategia': 'Competitivo', 'utilidad': 315490, 'tienda': 'SP Digital', 'mercado': 'Chile', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 55, 'justificacion': 'Se utilizó una estrategia competitiva debido a que el mercado presenta un amplio margen respecto al costo.', 'latencia_total': 0.0, 'reporte': 'reports/reporte_20260627_193536.pdf'}"
+    },
+    {
+        "consulta": "RTX 5090",
+        "respuesta": "{'producto': 'RTX 5090', 'precio_mercado': 1999990, 'precio_minimo': 1505617, 'precio_recomendado': 1899990, 'estrategia': 'Competitivo', 'utilidad': 695496, 'tienda': 'Base Referencial ORION', 'mercado': 'Global', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'justificacion': 'Se utilizó una estrategia competitiva debido a que el mercado presenta un amplio margen respecto al costo.', 'latencia_total': 0.12, 'reporte': 'reports/reporte_20260627_193545.pdf'}"
+    },
+    {
+        "consulta": "Iphone 15",
+        "respuesta": "{'producto': 'Iphone 15', 'precio_mercado': 899990, 'precio_minimo': 318125, 'precio_recomendado': 854990, 'estrategia': 'Competitivo', 'utilidad': 600490, 'tienda': 'Claro Chile Tienda', 'mercado': 'Global', 'envio': 'Blue Express', 'costo_envio': 4500, 'riesgo': 'MEDIO', 'score': 75, 'justificacion': 'Se utilizó una estrategia competitiva debido a que el mercado presenta un amplio margen respecto al costo.', 'latencia_total': 1.69, 'reporte': 'reports/reporte_20260627_193559.pdf'}"
+    }
+]
